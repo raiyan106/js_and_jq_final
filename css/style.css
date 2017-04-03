@@ -1,0 +1,53 @@
+.form-vl{
+	background: #555 
+	
+	height: 100vh;
+
+}
+.pull-center{
+	display: block;
+}
+.former{
+	margin: 0 auto;
+	float: none;
+	margin-top: 20em;
+	padding: 15px;
+	text-align: center;
+	background: rgba(77, 175, 38, 0.51);
+	border-radius: 10px;
+}
+.former h3{
+	padding: 15px 0;
+	display: block;
+	overflow: hidden;
+}
+.former label{
+	color: #fff;
+	font-size: 22px;
+}
+.images img{
+	max-width: 90%;
+}
+.invis{
+	color: transparent;
+}
+.show{
+	color: red;
+}
+#psw_info, #name_info{
+	font-size: 18px;
+	font-weight: bold;
+	background-color: #fff;
+	border-radius: 6px;
+
+}
+.pull-center input{
+	background-color: rgb(217, 246, 255);;
+	font-size: 20px;
+	font-weight: bold;
+}
+.btn-default{
+	font-weight: bolder;
+	margin: 10px 15px;
+	letter-spacing: 3px;
+}

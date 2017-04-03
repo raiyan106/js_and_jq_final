@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>JS & jQuery Exam</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+  <section class="form-vl">
+    <div class="container">
+
+      <div class="pull-center">
+        <div class="col-md-6 former">
+        <form>
+          <div class="form-group">
+            <label for="username" class="pull-left">User Name</label>
+            <input type="text" class="form-control" id="username" name="username"  placeholder="Name">
+           
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="pull-left" id="password">Password</label>
+            <input type="password" class="form-control" id="pass" name="pass" placeholder="Password">
+
+            <h3 id="psw_info"></h3>
+          </div>
+         
+          <p>
+            <button type="submit" class="btn btn-danger pull-left" id="reset">Reset</button>
+            <button type="submit" class="btn btn-success " id="submit">Submit</button>
+          </p>
+
+       
+
+        </form>
+          
+      </div>
+
+
+      </div>
+    </div>
+  </section>
+  
+  
+  
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  
+  <script>
+
+$ (function(){
+      
+      $('#pass').keyup(function() {
+        var Upsw=$("#pass").val();
+        if(Upsw.length < 10){
+                      $('#psw_info').text('Weak').css("color", "orange");
+                  }
+                  else if(Upsw.length < 12){
+                    $('#psw_info').text('Medium').css("color", "yellow");
+                  }
+                  else if(Upsw.length >= 12){
+                    $('#psw_info').text('Strong').css("color", "Green");
+                  }
+                  else {
+                    $('#psw_info').text('Wrong Password').css("color", "red");
+                  }
+          
+      })
+
+
+    });
+$('#reset').click(function(){
+           
+          $('#username').val('');
+          $('#pass').val('');
+      });
+
+$('#submit').click(function(){
+   var UsName=$("#username").val();
+  var user="raiyankhan106";
+  var pass="pass123";
+  if(typeof UsName=== typeof user)
+  {
+    window.location.replace("http://stackoverflow.com");
+  }
+  else alert(UsName);
+
+});
+
+    
+  </script>
+ 
+</body>
+</html>
+
+
+
+
